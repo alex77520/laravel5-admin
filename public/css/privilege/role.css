@@ -1,0 +1,14 @@
+
+#search_box li.search_type{
+list-style:none;
+padding-right:10px;
+float:left;
+}
+#relation .btn-group{
+float:left;
+}
+
+.paginations span,
+.paginations a{
+padding-left:10px;
+}

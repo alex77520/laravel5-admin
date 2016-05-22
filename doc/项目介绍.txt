@@ -1,0 +1,28 @@
+﻿
+
+项目的界面风格参考了H+后台模板的设计，（附有H+的完整模板：压缩包）
+
+
+项目的初始化数据库为：sql_data_bak.sql   
+
+服务器的配置参考：www.conf
+
+
+项目的管理员账号：admin_test@kuwo.cn    密码：admin
+
+
+===============
+页面样式的相关的封装：建议在新业务的开发中使用
+
+结合H+的通用的页面头部样式文件的模板位置：resources/views/layouts/common_footer.blade.php
+结合H+的通用的页面底部的脚本文件的模板位置：resources/views/layouts/common_header.blade.php
+ 可以根据需求在模板中引用
+
+参考布局模板的设计：resources/views/layouts/admin.blade.php
+
+
+也可以根据不同场景在： resources/views/share/  文件夹下自定义样式和脚本的模板文件
+===============
+
+
+
