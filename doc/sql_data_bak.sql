@@ -67,7 +67,8 @@ CREATE TABLE `cm_admin_modules` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '加入时间',
   `column_id` int(10) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uidx` (`module`,`action`)
+  UNIQUE KEY `uidx` (`module`,`action`),
+  KEY `module` (`module`)
 ) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -99,7 +100,8 @@ CREATE TABLE `cm_admin_permissions` (
   `operator` varchar(256) NOT NULL DEFAULT '' COMMENT '操作人/创建人',
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '加入时间',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `module_id` (`module_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -129,7 +131,8 @@ CREATE TABLE `cm_admin_roles` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '加入时间',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uidx` (`role`)
+  UNIQUE KEY `uidx` (`role`),
+  KEY `role` (`role`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -225,7 +228,8 @@ CREATE TABLE `cm_users` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '加入时间',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uidx` (`username`)
+  UNIQUE KEY `uidx` (`username`),
+  key `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

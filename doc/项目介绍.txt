@@ -8,7 +8,7 @@
 服务器的配置参考：www.conf
 
 
-项目的管理员账号：admin_test@kuwo.cn    密码：admin
+项目的管理员账号：admin_test@test.cn    密码：admin
 
 
 ===============
